@@ -1,11 +1,9 @@
 <template>
-  Hello world
-  <button @click="initSdr">Init receiver</button>
+  <button @click="initSdr">Connect to receiver</button>
   <button @click="pause">Pause</button>
   <button @click="resume">Resume</button>
   <button @click="scanBack">Scan back</button>
   <button @click="scanForward">Scan fwd</button>
-  <canvas id="wfcanvas" width="9600" height="100" style="display: block" />
   <input
     type="range"
     min="87.5"
@@ -33,12 +31,24 @@
   <button
     @click="
       () => {
+        setFrequency(89.09);
+      }
+    "
+  >
+    Radio 2
+  </button>
+  <button
+    @click="
+      () => {
         setFrequency(93.5);
       }
     "
   >
     Radio 4
   </button>
+  <canvas id="wfcanvas" width="1024" height="255" style="display: block" />
+  <canvas id="canvas2" width="1024" height="255" style="display: block" />
+  <canvas id="canvas3" width="1024" height="1024" style="display: block" />
 </template>
 
 <script>
@@ -48,7 +58,7 @@ export default {
   data() {
     return {
       tuner: null,
-      frequencyMhz: 102.0,
+      frequencyMhz: 98.8,
     };
   },
 
@@ -89,7 +99,7 @@ export default {
     },
 
     scan(min, max, step) {
-      this.tuner.scan(min, max, step, 0.3, (newFrequency) => {
+      this.tuner.scan(min, max, step, 0.7, (newFrequency) => {
         this.setFrequency(newFrequency / 1000000);
       });
     },

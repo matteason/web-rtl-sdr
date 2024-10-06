@@ -1,25 +1,24 @@
-# rtl-sdr-receiver
+# Web RTL-SDR
 
-This template should help get you started developing with Vue 3 in Vite.
+This is an early prototype of a web-based RTL-SDR tuner.
 
-## Recommended IDE Setup
+It heavily relies on Sandeep Mistry's [rtlsdrjs](https://github.com/sandeepmistry/rtlsdrjs) library and Google's 
+[Radio Receiver](https://github.com/google/radioreceiver) Chrome app by Jacobo Tarrío. This is just a basic Vue.js UI on top 
+of those libraries with some visualisations added.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+The code is mostly messy and uncommented, and about the quality you'd expect from a prototype, but there might be some
+useful snippets if you're looking to do SDR on the web.
 
-## Type Support for `.vue` Imports in TS
+This project has only been tested with the RTL-SDR Blog V3 dongle. Other dongles with the same chipset might work too.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## License 
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+Code from [rtlsdrjs](https://github.com/sandeepmistry/rtlsdrjs) and 
+[Radio Receiver](https://github.com/google/radioreceiver) is reproduced under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[fft.js](https://www.nayuki.io/page/free-small-fft-in-multiple-languages) is reproduced under the [MIT](https://opensource.org/license/mit) license.
 
 ## Project Setup
 

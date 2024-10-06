@@ -1,5 +1,5 @@
 {
-  "name": "rtl-sdr-receiver",
+  "name": "web-rtl-sdr",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

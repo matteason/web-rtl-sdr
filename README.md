@@ -2,6 +2,10 @@
 
 This is an early prototype of a web-based RTL-SDR tuner.
 
+
+https://github.com/user-attachments/assets/95be8221-1a66-45b5-a204-d1b5cffc96a2
+
+
 It heavily relies on Sandeep Mistry's [rtlsdrjs](https://github.com/sandeepmistry/rtlsdrjs) library and Google's 
 [Radio Receiver](https://github.com/google/radioreceiver) Chrome app by Jacobo Tarrío. This is just a basic Vue.js UI on top 
 of those libraries with some visualisations added.
